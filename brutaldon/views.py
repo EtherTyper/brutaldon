@@ -513,8 +513,6 @@ def old_login(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             api_base_url = form.cleaned_data["instance"]
-            if "gab.com" in api_base_url:
-                return redirect(django_settings.GAB_RICKROLL_URL)
             tmp_base = parse.urlparse(api_base_url.lower())
             if tmp_base.netloc == "":
                 api_base_url = parse.urlunparse(
