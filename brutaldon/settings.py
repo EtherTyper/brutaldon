@@ -205,11 +205,7 @@ RICKROLL_URL = "https://invidio.us/watch?v=dQw4w9WgXcQ"
 
 # Function to check if trying to add an account should trigger a special response
 def CHECK_INSTANCE_URL(url, redirect):
-    if "gab.com" in url:
-        return redirect(RICKROLL_URL)
-    elif "shitposter.club" in url:
-        return redirect(RICKROLL_URL)
-
+    return
 
 # Version number displayed on about page
 BRUTALDON_VERSION = "2.15.0"
